@@ -32,7 +32,7 @@ public class GestorMantenimiento {
     }
 
     public Estado consultarEstado(Vehiculo vehiculo) {
-        return servicio.getEstado();
+        return vehiculo.getMantenimiento().getEstado();
     }
     
  

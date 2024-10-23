@@ -10,14 +10,19 @@ package Modelo;
  */
 public class Procesamiento extends Thread{
     Proceso proceso;
+    Completado completado;
     Vehiculo vehiculo;
+    ServicioMantenimiento servicio;
+    
     public void run(){
         revisar();
     }
     
     public boolean revisar(){
-        if (GestorMantenimiento.getInstance().consultarEstado(vehiculo)==proceso.proceso()){
-            
+        if (GestorMantenimiento.getInstance().consultarEstado(vehiculo)==proceso){
+            vehiculo.getMantenimiento().setEstado(completado);
+            return true;
         }
+        return false;
     }
 }

@@ -12,7 +12,7 @@ public class ServicioMantenimiento {
     
     private String tipo;
     private String detalles;
-    private Estado estado; 
+    private Estado estado;
 
     public String getTipo() {
         return tipo;

@@ -12,6 +12,7 @@ public class Vehiculo {
     private String marca;
     private String modelo;
     private String matricula;
+    private ServicioMantenimiento mantenimiento;
 
     public String getMarca() {
         return marca;
@@ -25,9 +26,21 @@ public class Vehiculo {
         return matricula;
     }
 
+    public ServicioMantenimiento getMantenimiento() {
+        return mantenimiento;
+    }
+    
+
     public Vehiculo(String marca, String modelo, String matricula) {
         this.marca = marca;
         this.modelo = modelo;
         this.matricula = matricula;
     }
+
+    @Override
+    public String toString() {
+        return "marca=" + marca + ", modelo=" + modelo + ", matricula=" + matricula;
+    }
+    
+    
 }
