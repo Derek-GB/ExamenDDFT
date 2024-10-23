@@ -4,6 +4,7 @@
  */
 package Vista;
 
+import Controlador.TallerControlador;
 import InterfaceObserver.Observador;
 
 /**
@@ -11,12 +12,14 @@ import InterfaceObserver.Observador;
  * @author Student
  */
 public class FrmServiciosActuales extends javax.swing.JFrame implements Observador {
+    TallerControlador control;
 
     /**
      * Creates new form FrmServiciosActuales
      */
     public FrmServiciosActuales() {
         initComponents();
+        tb.setToolTipText(control.mostrarVehiculos(estado));
     }
 
     /**
@@ -30,13 +33,13 @@ public class FrmServiciosActuales extends javax.swing.JFrame implements Observad
 
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tb = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tb.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -55,7 +58,7 @@ public class FrmServiciosActuales extends javax.swing.JFrame implements Observad
                 return types [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tb);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -131,6 +134,6 @@ public class FrmServiciosActuales extends javax.swing.JFrame implements Observad
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tb;
     // End of variables declaration//GEN-END:variables
 }
