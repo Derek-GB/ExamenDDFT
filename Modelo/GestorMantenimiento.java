@@ -14,7 +14,7 @@ import java.util.Iterator;
 public class GestorMantenimiento {
 
     private static GestorMantenimiento mantenimiento;
-    ArrayList<Vehiculo> lista = new ArrayList();
+    ArrayList<Vehiculo> lista;
     ServicioMantenimiento servicio;
     Vehiculo vehiculo;
 
@@ -22,8 +22,6 @@ public class GestorMantenimiento {
         return lista.iterator();
     }
 
-    
-    
     public void agregar(Vehiculo vehiculo) {
         lista.add(vehiculo);
     }
@@ -42,7 +40,7 @@ public class GestorMantenimiento {
     }
 
     private GestorMantenimiento() {
-        GestorMantenimiento mantenimiento = new GestorMantenimiento();
+        lista = new ArrayList();
     }
 
     public static GestorMantenimiento getInstance() {
@@ -51,9 +49,5 @@ public class GestorMantenimiento {
             return mantenimiento;
         }
         return mantenimiento;
-    }
-
-    public void nose() {
-        System.out.println("nose");
     }
 }
