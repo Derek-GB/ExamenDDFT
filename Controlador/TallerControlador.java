@@ -57,7 +57,7 @@ public class TallerControlador implements Observable {
             return;
         }
         Vehiculo next = (Vehiculo) iterador.next();
-        if (next.getEstado() == estado) {
+        if (next.getMantenimiento().getEstado() == estado) {
             lista.add(next.toString());
         }
         contarVehiculos(estado, lista, iterador);
