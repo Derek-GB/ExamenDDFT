@@ -31,14 +31,14 @@ public class GestorMantenimiento {
 
     }
 
-    public void consultarEstado(Vehiculo vehiculo) {
-        servicio.getEstado();
+    public Estado consultarEstado(Vehiculo vehiculo) {
+        return servicio.getEstado();
     }
     
  
 
     private GestorMantenimiento() {
-        mantenimiento = new GestorMantenimiento();
+        GestorMantenimiento mantenimiento = new GestorMantenimiento();
     }
 
     public static GestorMantenimiento getInstance() {

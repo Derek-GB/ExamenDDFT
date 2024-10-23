@@ -10,8 +10,8 @@ package Modelo;
  */
 public abstract class Estado {
     
-    public abstract void completado();
-    public abstract void proceso();
-    public abstract void espera();
+    public abstract String completado();
+    public abstract String proceso();
+    public abstract String espera();
     
 }

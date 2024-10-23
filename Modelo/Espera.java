@@ -11,19 +11,20 @@ package Modelo;
 public class Espera extends Estado{
 
     @Override
-    public void completado() {
-        System.out.println("El vehiculo esta completado");
+    public String completado() {
+     return "completado";
     }
 
     @Override
-    public void proceso() {
-        System.out.println("El vehiculo esta en proceso");
+    public String proceso() {
+       return "proceso";
     }
 
     @Override
-    public void espera() {
-        System.out.println("El vehiculo esta en espera");
+    public String espera() {
+        return "espera";
     }
+
 
     
 }
