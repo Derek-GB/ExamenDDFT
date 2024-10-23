@@ -5,6 +5,7 @@
 package Modelo;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  *
@@ -16,8 +17,13 @@ public class GestorMantenimiento {
     ArrayList<Vehiculo> lista = new ArrayList();
     ServicioMantenimiento servicio;
     Vehiculo vehiculo;
-    
 
+    public Iterator<Vehiculo> getLista() {
+        return lista.iterator();
+    }
+
+    
+    
     public void agregar(Vehiculo vehiculo) {
         lista.add(vehiculo);
     }
@@ -34,8 +40,6 @@ public class GestorMantenimiento {
     public Estado consultarEstado(Vehiculo vehiculo) {
         return vehiculo.getMantenimiento().getEstado();
     }
-    
- 
 
     private GestorMantenimiento() {
         GestorMantenimiento mantenimiento = new GestorMantenimiento();
@@ -49,7 +53,7 @@ public class GestorMantenimiento {
         return mantenimiento;
     }
 
-    public void nose(){
+    public void nose() {
         System.out.println("nose");
     }
 }
