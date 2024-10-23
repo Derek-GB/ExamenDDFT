@@ -29,20 +29,16 @@ public class TallerControlador implements Observable {
     private ArrayList<Observador> observadores;
     private GestorMantenimiento gestor;
 
-    public TallerControlador(FrmPrincipal frmPrincipal, FrmServiciosActuales frmActuales, FrmServiciosCompletados frmCompletados, FrmRegistro frmRegistro, ArrayList<Observador> observadores) {
-        this.frmPrincipal = frmPrincipal;
-        this.frmActuales = frmActuales;
-        this.frmCompletados = frmCompletados;
-        this.frmRegistro = frmRegistro;
+    public TallerControlador() {
         this.observadores = new ArrayList<>();
-        addObservador(frmRegistro);
-        addObservador(frmCompletados);
-        addObservador(frmActuales);
+
         gestor = GestorMantenimiento.getInstance();
     }
 
     public void agregarVehiculo(String matricula, String modelo, String marca) {
-        gestor.agregar(new Vehiculo(marca, modelo, matricula));
+        Vehiculo v = new Vehiculo(marca, modelo, matricula);
+        gestor.agregar(v);
+        avisarCambio(v);
     }
 
     public ArrayList<String> mostrarVehiculos(Estado estado) {
