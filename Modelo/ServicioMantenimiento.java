@@ -41,7 +41,7 @@ public class ServicioMantenimiento {
     }
     
       public ServicioMantenimiento() {
-        this("","",Estado.espera);
+        this("","",null);
     }
 
     @Override

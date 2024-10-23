@@ -8,6 +8,10 @@ package Modelo;
  *
  * @author Student
  */
-public class Estado {
+public abstract class Estado {
+    
+    public abstract void completado();
+    public abstract void proceso();
+    public abstract void espera();
     
 }

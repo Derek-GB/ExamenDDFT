@@ -8,22 +8,23 @@ package Modelo;
  *
  * @author Student
  */
-public class Completado implements Estado {
+public class Completado extends Estado {
 
     @Override
-    public void Espera() {
+    public void completado() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public void Proceso() {
+    public void proceso() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public Completado() {
+    public void espera() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+
 
   
  
