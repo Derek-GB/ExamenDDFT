@@ -12,18 +12,18 @@ public class Espera extends Estado{
 
     @Override
     public void completado() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        System.out.println("El vehiculo esta completado");
     }
 
     @Override
     public void proceso() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        System.out.println("El vehiculo esta en proceso");
     }
 
     @Override
     public void espera() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        System.out.println("El vehiculo esta en espera");
     }
 
- 
+    
 }
